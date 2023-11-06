@@ -91,7 +91,7 @@ openssl s_client is an OpenSSL utility command that allows you to connect to ser
 <details>
 <summary><h2>ssh</h2></summary>
 SSH (Secure Shell) is a network protocol and cryptographic protocol designed to securely connect to and work remotely on remote servers. SSH allows you to execute commands on a remote server, manage files, and transfer data over an encrypted connection.<br>- <strong>ssh username@server_ip</strong> - <i>connecting to a remote server</i>
-<strong>ssh-keygen</strong> - <i>create public-private keys</i>
+<br> <strong>ssh-keygen</strong> - <i>create public-private keys</i>
 <br> <strong>Options</strong>
 <br>  -p - Port to connect to on the remote host;
 <br>  -V - Display the version number;
@@ -100,4 +100,109 @@ SSH (Secure Shell) is a network protocol and cryptographic protocol designed to 
 <br> 	-c - Selects the cipher specification for encrypting the session;
 <br> 	-f - Requests ssh to go to background just before command execution;
 
+</details>
+
+</details>
+<details>
+<summary><h2>traceroute</h2></summary>
+Traceroute is a command line command that allows you to trace the route of packets from your computer to a specified target IP address or domain name.
+<br>- <strong>traceroute example.com</strong> - <i>basic usage</i>
+
+<br> <strong>Options</strong>
+<br>  –help - Information about the command;
+<br>  -p port - Define the port for the query;
+<br>	-n - Stop the resolving of the IP addresses;
+<br> 	-w waittime - Maximum waiting time for each of the replies.
+<br> 	-I - Use the ICMP echo for the requests.
+<br> 	-m max_ttl - The TTL in traceroute means the maximum amount of hops.
+</details>
+
+
+<details>
+<summary><h2>ss</h2></summary>
+ss is a command line command used to display information about sockets (network connections) on a system. This command allows you to view active network connections, ports, addresses, and other parameters. ss is a useful tool for monitoring network activity on a computer.
+<br>- <strong>ss</strong> - <i>displaying active sockets</i>
+
+<br> <strong>Options</strong>
+<br>  -t	The -t parameter tells ss to show TCP connections only.
+<br>  -u	The –u parameter tells ss to show UDP connections only.
+<br>	-l	The -l parameter tells ss to display listening sockets, which are omitted by default.
+<br>  -n	The -n option tells ss to disable the resolving of service names.
+<br>  -r	The -r option tells ss to enable DNS resolving in the output, which is turned off by default.
+<br>  -m	The -m parameter tells ss to display socket memory usage information.
+<br>  -p	The -p parameter tells ss to display the process that is using a socket.
+<br>  -e	The -e option tells ss to display detailed socket information.
+<br>  -x	The -x parameter tells ss to display UNIX domain sockets only.
+
+</details>
+<details>
+<summary><h2>ip</h2></summary>
+ip is a command line command for administering and configuring the network in Linux-based systems. It provides advanced functionality for managing network interfaces, routing rules, addresses, and other network parameters
+<br>- <strong>ip link or ip a</strong> - <i>to display information about all network interfaces on a system</i>
+<br>- <strong>ip a add 192.168.31.100/24 dev eth0</strong> - <i>To assign an IP address to a network interface, use the ip address add command. For example, to assign an IP address of 192.168.1.100 and a subnet mask of 255.255.255.0 to interface eth0</i>
+<br>- <strong>ip a delete 192.168.31.100/24 dev eth0</strong> - <i>remove an IP address from a network interface</i>
+<br>- <strong>ip route</strong> - <i>displaying information about routing</i>
+<br>- <strong>ip route add 192.168.2.0/24 via 192.168.1.1</strong> - <i>this command adds a route to the 192.168.2.0/24 subnet through the router with the IP address 192.168.1.1</i>
+ <br>- <strong>ip a delete 192.168.31.100/24 dev eth0</strong> - <i>remove an IP address from a network interface</i>
+<br> <strong>Options</strong>
+<br> -V, -Version - Print the version of the ip utility and exit.
+<br> -h, -human, -human-readable - output statistics with human readable values followed by suffix.
+<br> -d, -details - Output more detailed information.
+</details>
+
+<details>
+<summary><h2>curl</h2></summary>
+curl is a command line command for making HTTP requests and transferring data over a network. curl allows you to interact with web servers, download web page content, and send and receive data via HTTP, HTTPS, FTP, and other protocols.
+<br>- <strong>curl [options/URLs]</strong> - <i>the basic curl syntax</i>
+
+
+<br> <strong>Options</strong>
+<br> -I - Obtain only headers;
+<br> -k - Allow curl to work with insecure connections;
+<br> --o, --output <file> - Store output in a file. 
+<br> -i, --include	Specify that the output should include the HTTP response headers;
+</details>
+
+<details>
+<summary><h2>wget</h2></summary>
+Wget is a command-line tool for downloading files from the Internet. It allows you to download files from web servers and FTP servers using the command line.
+<br>- <strong>wget https://example.com/file.txt</strong> - <i>downloading a file from a URL</i>
+
+<br> <strong>Options</strong>
+<br>-c or –continue: Continues a previously interrupted download.
+<br>-N: Will only download a file if it’s newer than a file of the same name on your computer.
+<br>-t [amount]: Sets how many times Linux wget will try to download a file.
+<br>-w [time]: Sets how many seconds wget will wait between multiple downloads.
+</details>
+
+<details>
+<summary><h2>rsync</h2></summary>
+rsync is a command-line tool for synchronizing and copying files and directories between different systems or within the same system. rsync allows you to synchronize files efficiently over a network or locally and uses algorithms to transfer only the changed parts of files, making it fast and resource-efficient.
+<br>- <strong>rsync -a D1 D2</strong> - <i>to mirror the directory D1 and its contents into another directory D2 on a single machine</i>
+
+<br> <strong>Options</strong>
+<br>-o - Copy the ownership of the files. (You probably need superuser privileges on the remote host.)
+<br>-g - Copy the group ownership of the files. (You might need superuser privileges on the remote host.)
+<br>-p - Copy the file permissions.
+<br>-t - Copy the file timestamps.
+<br>-r - Copy directories recursively, i.e., including their contents.
+<br>-l - Permit symbolic links to be copied (not the files they point to).
+<br>-D - Permit devices to be copied. (Superuser only.)
+<br>-a - Mirroring: copy all attributes of the original files. This implies all of the options, -Dgloprt.
+<br>-v - Verbose mode
+</details>
+<details>
+<summary><h2>netstat</h2></summary>
+netstat (Network Statistics) is a command line command to display information about network connections, routes, and network statistics on your system. It allows you to analyze the current state of the network and can be useful for identifying problems in the network connection.
+<br>- <strong>netstat</strong> - <i>Display active network connections</i>
+
+<br> <strong>Options</strong>
+<br>-a - Displays all active ports
+<br>-e - Shows statistics about your network connection (received and sent data packets, etc.)
+<br>-i - Brings up the netstat overview menu
+<br>-n - Numerical display of addresses and port numbers
+<br>-p - Displays the connections for the specified protocol, in this case TCP (also possible: UDP, TCPv6, or UDPv6)
+<br>-q - Lists all connections, all listening TCP ports, and all open TCP ports that are not listening
+<br>-r - Displays the IP routing table
+<br>-s - Retrieves statistics about the important network protocols such as TCP, IP, or UDP
 </details>
