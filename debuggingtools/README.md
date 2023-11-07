@@ -206,3 +206,139 @@ netstat (Network Statistics) is a command line command to display information ab
 <br>-r - Displays the IP routing table
 <br>-s - Retrieves statistics about the important network protocols such as TCP, IP, or UDP
 </details>
+
+<details>
+<summary><h2>netstat</h2></summary>
+netstat (Network Statistics) is a command line command to display information about network connections, routes, and network statistics on your system. It allows you to analyze the current state of the network and can be useful for identifying problems in the network connection.
+<br>- <strong>netstat</strong> - <i>Display active network connections</i>
+
+<br> <strong>Options</strong>
+<br>-a - Displays all active ports
+<br>-e - Shows statistics about your network connection (received and sent data packets, etc.)
+<br>-i - Brings up the netstat overview menu
+<br>-n - Numerical display of addresses and port numbers
+<br>-p - Displays the connections for the specified protocol, in this case TCP (also possible: UDP, TCPv6, or UDPv6)
+<br>-q - Lists all connections, all listening TCP ports, and all open TCP ports that are not listening
+<br>-r - Displays the IP routing table
+<br>-s - Retrieves statistics about the important network protocols such as TCP, IP, or UDP
+</details>
+<details>
+<summary><h2>ps</h2></summary>
+ps is a command line command for displaying information about processes running on your system. It allows you to view a list of active processes, their attributes, and other information. Here are some of the main features and uses of the ps command
+<br>- <strong>ps</strong> - <i>by default, the ps command displays a list of all processes running in the current shell</i>
+
+<br> <strong>Options</strong>
+<br> ps -ef or ps -aux − List currently running processes in full format
+<br>ps -ax − List currently running processes
+<br>ps -u <username> − List processes for a specific user
+<br>ps -C <command> − List processes for a given command
+<br>ps -p <PID> − List processes with a given PID
+<br>ps -ppid <PPID> − List processes with a given parent process ID (PPID)
+<br>pstree − Show processes in a hierarchy
+<br>ps -L − List all threads for a particular process
+<br>ps --sort pmem − Find memory leaks
+<br>ps -eo − Show security information
+<br>ps -U root -u root u − Show processes running by root
+</details>
+
+<details>
+<summary><h2>dig</h2></summary>
+dig (Domain Information Groper) is a command-line tool for performing queries to DNS servers. It allows you to get information about DNS records for specified domain names or IP addresses.
+<br>- <strong>dig example.com</strong> - <i>getting DNS records</i>
+<br>
+<br>Types of resource records of the DNS
+<br>A	IPv4 IP address	192.168.1.5 or 75.126.153.206
+<br>AAAA	IPv6 IP address	2607:f0d0:1002:51::4
+<br>CNAME	Canonical name record (Alias)	s0.cyberciti.org is an alias
+<br>for d2m4hyssawyie7.cloudfront.net
+<br>MX	Email server host names	smtp.cyberciti.biz or mx1.nixcraft.com
+<br>NS	Name (DNS) server names	ns1.cyberciti.biz or ns-243.awsdns-30.com
+<br>PTR	Pointer to a canonical name.
+<br>Mostly used for implementing reverse DNS lookups	82.236.125.74.in-addr.arpa
+<br>SOA	Authoritative information about a DNS zone	
+<br>TXT	Text record	
+<br>
+
+<br> <strong>Options</strong>
+<br>-x- to map addresses to names (reverse lookups)
+<br>+short - short answer using the dig
+<br> -f lookup.txt - option to the dig command that makes dig operate in batch mode
+<br>-b address[#port]	Bind to source address/port
+<br>-p port	Specify port number
+<br>-q name	Specify query name
+<br>-t type	Specify query type
+<br>-c class	Specify query class
+<br>-k keyfile	Specify tsig key file
+<br>-y [hmac:]name:key	Specify named base64 tsig key
+<br>-4	Use IPv4 query transport only
+<br>-6	Use IPv6 query transport only
+<br>-m	Enable memory usage debugging
+
+</details>
+<details>
+<summary><h2>host</h2></summary>
+The host command is a command-line tool used to resolve domain names and display related information. It is used to resolve domain names to IP addresses and vice versa, and can be useful for diagnosing network problems and checking the status of DNS servers.
+<br>- <strong>host example.com</strong> - <i>resolve the domain name to an IP address</i>
+
+<br> <strong>Options</strong>
+<br>-a or -v - It used to specify the query type or enables the verbose output.
+<br>-t - It is used to specify the type of query
+<br>-R - In order to specify the number of retries you can do in case one try fails. If anyone try succeeds then the command stops.
+<br>-l - In order to list all hosts in a domain.
+</details>
+
+<details>
+<summary><h2>mtr</h2></summary>
+mtr (My Traceroute) is a command-line tool that combines the functions of the traceroute and ping utilities. It is used to diagnose and measure network routes to a specified target system or IP address. mtr provides more detailed information about intermediate nodes and packet loss than regular traceroute
+<br>- <strong>mtr example.com</strong> - <i>run mtr to diagnose the network route</i>
+
+<br> <strong>Options</strong>
+<br>-h–help	Show all the available options.
+<br>-v–version	Show the version of the MTR command.
+<br>-r–report	This starts the report mode. In this mode, it will run the specified by “–c” number of times and show statistics at the end.  
+<br>-w–report-wide	Wide report mode. The difference with the previous is that it won’t cut hostnames in the report. 
+<br>-c COUNT–report-cycles COUNT	Specify the number of pings. 
+<br>-s BYTES–psize BYTES PACKETSIZE	Set the size of the packets. If set to a negative number, it will send packets of random size. 
+<br>-t–curses	Force curses-based terminal interface.
+<br>-n–no-dns	Show numeric IP numbers and no hostname resolving.
+<br>-g–gtk	Force GTK+ interface. 
+<br>-p–split	Set the mtr command for the split-user interface. 
+<br>-l–raw	With the letter “L”, you can set the use of the raw output format. 
+<br>-a IP.ADD.RE.SS–address IP.ADD.RE.SS	Bing outgoing packets’ sockets to a particular interface. 
+<br>-i SECONDS–interval SECONDS	Set the time in seconds between each ICMP ECHO request. 
+<br>-u	Force UDP use instead of ICMP ECHO.
+<br>-4	Force IPv4 only.
+<br>-6	Force IPv6 only.
+</details>
+
+<details>
+<summary><h2>htop</h2></summary>
+htop is an interactive process and system resource monitor in a command-line environment for Unix-like operating systems. htop provides more functionality and information than the standard top command and allows you to view and control processes on your system.
+<br>- <strong>htop</strong> - <i>htop can be run from the command line</i>
+<br> <strong>Options</strong>
+<br>-d –delay=DELAY	Delay between output updates, in tenths of seconds.
+<br>-C –no-color – Run htop in monochrome mode.
+<br>-p –pid=PID,PID…	Display output for these PIDs only.
+<br>-s –sort help	Print a list of column names, for which the htop output can be sorted.
+<br>-s –sort COLUMN	Sort the output based on COLUMN
+<br>-u–user=USERNAME	Display processes for the user with this USERNAME only.
+<br>-v –version	Display htop version and exit.
+</details>
+
+<details>
+<summary><h2>top</h2></summary>
+The Unix top command is useful for monitoring systems continuously for processes that take more system resources like the CPU time and the memory. top periodically updates the display showing the high resource consuming processes at the top. 
+<br>- <strong>top</strong> - <i>the top command can be started simply by giving the command</i>
+<br> <strong>Options</strong>
+<br>-h, -v	print program version, usage prompt and quit
+<br>-b	work in batch mode. No inputs are accepted and top quits after -n number iterations
+<br>-n	work for the given number of iterations and quit.
+<br>-d	delay time interval between iterations in in the format ss[.tt] seconds
+<br>-H	Show threads. By default, processes are displayed. LWP ids are displayed under PID.
+<br>-i	do not display idle processes
+<br>-u	Report only processes with the given effective user id or user name
+<br>-U	Report only processes with the given real, effective, saved or filesystem user id or user name
+<br>-p	Monitor the processes identified by the given list of process ids.
+<br>-s	work in secure mode
+<br>-S	Display cumulative CPU time for each process and its children which have died and have been waited for by it
+</details>
