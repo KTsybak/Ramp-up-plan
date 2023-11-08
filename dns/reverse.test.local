@@ -1,0 +1,18 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     test.local. root.test.local. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+; Name server record
+@       IN      NS      bindserver.test.local.
+bindserver      IN      A       192.168.31.101
+; PTR record for name server
+101   IN      PTR     bindserver.test.local.
+; PTR record for clients
+102   IN      PTR     client1.test.local
+103   IN      PTR     client2.test.local
