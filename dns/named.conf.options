@@ -1,0 +1,11 @@
+acl mynetwork {
+192.168.31.0/24;
+};
+options {
+        directory "/var/cache/bind";
+        allow-query { localhost; mynetwork; };
+        allow-transfer { localhost; };
+        forwarders { 8.8.8.8; };
+        recursion yes;
+        dnssec-validation auto;
+};
