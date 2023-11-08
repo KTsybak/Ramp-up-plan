@@ -1,0 +1,17 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     test.local. root.test.local. (
+                              3         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+; Name server record
+@       IN      NS      bindserver.test.local.
+; A record for name server
+bindserver      IN      A       192.168.31.101
+; A record for clients
+client1      IN      A       192.168.31.102
+client2      IN      A       192.168.31.103
