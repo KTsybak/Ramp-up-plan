@@ -1,0 +1,8 @@
+zone "test.local" IN {
+        type master;
+        file "/etc/bind/zones/test.local";
+};
+zone "31.168.192.in-addr.arpa" IN {
+        type master;
+        file "/etc/bind/zones/reverse.test.local";
+};
