@@ -5,8 +5,11 @@ pipeline {
      
         stage('Terraform init') {
             steps {
-                sh 'cd /home/jenkins/workspace/terraform/terraform'
+            script {
+            
+            dir('/home/jenkins/workspace/terraform/terraform') {
                 sh 'terraform init'
+            }
             }
         }
   
