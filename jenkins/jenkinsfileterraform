@@ -2,20 +2,23 @@ pipeline {
     agent { label 'ubuntu_agent' }
 
     stages {
-     
         stage('Terraform init') {
             steps {
-            script {
-            
-            dir('/home/jenkins/workspace/terraform/terraform') {
-                sh 'terraform init'
-            }
+                script {
+                    dir('/home/jenkins/workspace/terraform/terraform') {
+                        sh 'terraform init'
+                    }
+                }
             }
         }
-  
+
         stage('Terraform apply') {
             steps {
-                sh 'terraform apply --auto-approve'
+                script {
+                    dir('/home/jenkins/workspace/terraform/terraform') {
+                        sh 'terraform apply --auto-approve'
+                    }
+                }
             }
         }
     }
