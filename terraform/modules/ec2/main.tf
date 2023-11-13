@@ -53,6 +53,6 @@ resource "aws_security_group" "ec2_group" {
 }
 resource "aws_key_pair" "keys" {
   key_name   = "aws_key"
-  public_key = "${file("/home/jenkins/.ssh/terraform.pub")}"
+  public_key = "${file("/home/jenkins/.ssh/aws.pub")}"
 }
 
