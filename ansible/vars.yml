@@ -1,0 +1,13 @@
+---
+- name: Variables
+  hosts: all
+  become: yes
+
+  vars:
+    message1: Hello
+  tasks:
+  - name: Print secrets
+    debug:
+      var: message1
+  - debug:
+      msg: "It is test: {{ message1 }}"
