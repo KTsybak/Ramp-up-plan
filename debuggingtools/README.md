@@ -1,4 +1,4 @@
-<img width="911" alt="Screenshot 2023-11-14 at 17 07 13" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/ba467473-3c5a-4ac0-92cb-76ccffa31b28"># Debugging and networking troubleshooting tools
+# Debugging and networking troubleshooting tools
 <details>
 <summary><h2>nc</h2></summary>
 The nc utility, which stands for "netcat," is a very powerful and flexible tool for command-line network communication. nc can be used as a client or server to create TCP or UDP connections, as well as to send and receive data over the network.
