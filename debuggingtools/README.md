@@ -57,8 +57,7 @@ Ping is a command line command used to test the availability of and measure the 
 <br> -f	Use this ping command option to prevent ICMP Echo Requests from being fragmented by routers between you and the target. The -f option is most often used to troubleshoot Path Maximum Transmission Unit (PMTU) issues.
 <br> -i This option sets the Time to Live (TTL) value, the maximum of which is 255.
 <br> -r count	Use this ping command option to specify the number of hops between your computer and the target computer or device that you'd like to be recorded and displayed. 
-<br>
-<img width="755" alt="Screenshot 2023-11-14 at 16 05 46" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/61a61254-e640-4d02-8393-e68b47537853">
+<br> <img width="755" alt="Screenshot 2023-11-14 at 16 05 46" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/61a61254-e640-4d02-8393-e68b47537853">
 
 </details>
 
