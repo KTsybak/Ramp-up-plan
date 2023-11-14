@@ -20,8 +20,9 @@ The nc utility, which stands for "netcat," is a very powerful and flexible tool 
 <br>-W number of packets – close the connection after receiving a certain number of packets;
 <br>-w timer – enable timer to limit connection time. Set in seconds;
 <br>-z – disable sending data. Used when scanning.
-</details>
 <img width="853" alt="Screenshot 2023-11-14 at 15 59 31" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/9acfeb6b-805f-489a-b2d4-315385fe72c8">
+</details>
+
 
 
 <details>
