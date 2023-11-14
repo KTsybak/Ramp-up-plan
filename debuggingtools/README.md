@@ -20,6 +20,7 @@ The nc utility, which stands for "netcat," is a very powerful and flexible tool 
 <br>-W number of packets – close the connection after receiving a certain number of packets;
 <br>-w timer – enable timer to limit connection time. Set in seconds;
 <br>-z – disable sending data. Used when scanning.
+ 
 <img width="853" alt="Screenshot 2023-11-14 at 15 59 31" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/9acfeb6b-805f-489a-b2d4-315385fe72c8">
 </details>
 
@@ -77,6 +78,9 @@ Telnet is a simple networking protocol and program that allows you to establish 
 <br> 	-E	No character is recognized as escape character
 <br> 	-x	Attempts to activate encryption
 
+<img width="497" alt="Screenshot 2023-11-14 at 16 18 15" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/e7dcce22-3967-4a28-82af-073660be2594">
+
+
 </details>
 <details>
 <summary><h2>openssl s_client</h2></summary>
@@ -91,6 +95,8 @@ openssl s_client is an OpenSSL utility command that allows you to connect to ser
 <br> 	-cert filename - The client certificate to use, if one is requested by the server. The default is not to use a certificate.
 <br> 	-CRL filename - CRL file to use to check the server's certificate.
 <br> 	-key filename|uri - The client private key to use. 
+
+<img width="782" alt="Screenshot 2023-11-14 at 16 20 13" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/aa4daefb-91be-4964-b085-005146d86cd1">
 
 </details>
 
@@ -107,6 +113,8 @@ SSH (Secure Shell) is a network protocol and cryptographic protocol designed to 
 <br> 	-c - Selects the cipher specification for encrypting the session;
 <br> 	-f - Requests ssh to go to background just before command execution;
 
+<img width="710" alt="Screenshot 2023-11-14 at 16 21 16" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/d849174d-4fa6-41cb-94a1-2396666f6711">
+
 </details>
 
 </details>
@@ -122,6 +130,9 @@ Traceroute is a command line command that allows you to trace the route of packe
 <br> 	-w waittime - Maximum waiting time for each of the replies.
 <br> 	-I - Use the ICMP echo for the requests.
 <br> 	-m max_ttl - The TTL in traceroute means the maximum amount of hops.
+
+<img width="732" alt="Screenshot 2023-11-14 at 16 23 22" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/18e6191d-6b64-4c7b-97ee-e37426f4d362">
+
 </details>
 
 
@@ -140,6 +151,8 @@ ss is a command line command used to display information about sockets (network 
 <br>  -p	The -p parameter tells ss to display the process that is using a socket.
 <br>  -e	The -e option tells ss to display detailed socket information.
 <br>  -x	The -x parameter tells ss to display UNIX domain sockets only.
+
+<img width="900" alt="Screenshot 2023-11-14 at 16 24 13" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/c3addf50-ea6f-4911-8885-80b12378afcf">
 
 </details>
 <details>
