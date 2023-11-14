@@ -1,4 +1,4 @@
-# Debugging and networking troubleshooting tools
+<img width="911" alt="Screenshot 2023-11-14 at 17 07 13" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/ba467473-3c5a-4ac0-92cb-76ccffa31b28"># Debugging and networking troubleshooting tools
 <details>
 <summary><h2>nc</h2></summary>
 The nc utility, which stands for "netcat," is a very powerful and flexible tool for command-line network communication. nc can be used as a client or server to create TCP or UDP connections, as well as to send and receive data over the network.
@@ -168,6 +168,9 @@ ip is a command line command for administering and configuring the network in Li
 <br> -V, -Version - Print the version of the ip utility and exit.
 <br> -h, -human, -human-readable - output statistics with human readable values followed by suffix.
 <br> -d, -details - Output more detailed information.
+
+ <img width="818" alt="Screenshot 2023-11-14 at 16 28 17" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/90ed0aad-cc37-4b9b-8430-419c5a4a3336">
+
 </details>
 
 <details>
@@ -181,6 +184,11 @@ curl is a command line command for making HTTP requests and transferring data ov
 <br> -k - Allow curl to work with insecure connections;
 <br> --o, --output <file> - Store output in a file. 
 <br> -i, --include	Specify that the output should include the HTTP response headers;
+
+<img width="869" alt="Screenshot 2023-11-14 at 16 32 10" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/784938a1-06a4-4cd4-9b1c-68e9286a180a">
+
+<img width="746" alt="Screenshot 2023-11-14 at 16 33 47" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/c903e5b9-a1d1-4ac7-ba6d-ad0315c01bc3">
+
 </details>
 
 <details>
@@ -193,6 +201,9 @@ Wget is a command-line tool for downloading files from the Internet. It allows y
 <br>-N: Will only download a file if it’s newer than a file of the same name on your computer.
 <br>-t [amount]: Sets how many times Linux wget will try to download a file.
 <br>-w [time]: Sets how many seconds wget will wait between multiple downloads.
+
+<img width="864" alt="Screenshot 2023-11-14 at 16 38 13" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/86eeeab3-b5d7-4058-abe4-f62cae380ebe">
+
 </details>
 
 <details>
@@ -210,6 +221,12 @@ rsync is a command-line tool for synchronizing and copying files and directories
 <br>-D - Permit devices to be copied. (Superuser only.)
 <br>-a - Mirroring: copy all attributes of the original files. This implies all of the options, -Dgloprt.
 <br>-v - Verbose mode
+
+<img width="1356" alt="Screenshot 2023-11-14 at 16 51 56" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/5f5af7bd-805c-407c-a283-842516323fa6">
+
+<img width="1214" alt="Screenshot 2023-11-14 at 16 53 11" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/870c8ad9-3a9b-4d0f-b858-18c5182c2c9d">
+
+
 </details>
 <details>
 <summary><h2>netstat</h2></summary>
@@ -225,23 +242,12 @@ netstat (Network Statistics) is a command line command to display information ab
 <br>-q - Lists all connections, all listening TCP ports, and all open TCP ports that are not listening
 <br>-r - Displays the IP routing table
 <br>-s - Retrieves statistics about the important network protocols such as TCP, IP, or UDP
+
+<img width="837" alt="Screenshot 2023-11-14 at 16 55 04" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/2a190568-a8aa-44a9-881b-40150c982948">
+
 </details>
 
-<details>
-<summary><h2>netstat</h2></summary>
-netstat (Network Statistics) is a command line command to display information about network connections, routes, and network statistics on your system. It allows you to analyze the current state of the network and can be useful for identifying problems in the network connection.
-<br>- <strong>netstat</strong> - <i>Display active network connections</i>
 
-<br> <strong>Options</strong>
-<br>-a - Displays all active ports
-<br>-e - Shows statistics about your network connection (received and sent data packets, etc.)
-<br>-i - Brings up the netstat overview menu
-<br>-n - Numerical display of addresses and port numbers
-<br>-p - Displays the connections for the specified protocol, in this case TCP (also possible: UDP, TCPv6, or UDPv6)
-<br>-q - Lists all connections, all listening TCP ports, and all open TCP ports that are not listening
-<br>-r - Displays the IP routing table
-<br>-s - Retrieves statistics about the important network protocols such as TCP, IP, or UDP
-</details>
 <details>
 <summary><h2>ps</h2></summary>
 ps is a command line command for displaying information about processes running on your system. It allows you to view a list of active processes, their attributes, and other information. Here are some of the main features and uses of the ps command
@@ -259,6 +265,9 @@ ps is a command line command for displaying information about processes running 
 <br>ps --sort pmem − Find memory leaks
 <br>ps -eo − Show security information
 <br>ps -U root -u root u − Show processes running by root
+
+<img width="855" alt="Screenshot 2023-11-14 at 16 57 11" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/b00a9912-bc07-4d24-88f4-0b999807475a">
+
 </details>
 
 <details>
@@ -294,6 +303,9 @@ dig (Domain Information Groper) is a command-line tool for performing queries to
 <br>-6	Use IPv6 query transport only
 <br>-m	Enable memory usage debugging
 
+<img width="602" alt="Screenshot 2023-11-14 at 16 59 26" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/a7925710-b960-4096-a7f3-1a733455824e">
+
+
 </details>
 <details>
 <summary><h2>host</h2></summary>
@@ -305,6 +317,9 @@ The host command is a command-line tool used to resolve domain names and display
 <br>-t - It is used to specify the type of query
 <br>-R - In order to specify the number of retries you can do in case one try fails. If anyone try succeeds then the command stops.
 <br>-l - In order to list all hosts in a domain.
+
+<img width="474" alt="Screenshot 2023-11-14 at 17 01 15" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/bc1d3b03-e8c9-4e2e-86f8-bd596dabe0f3">
+
 </details>
 
 <details>
@@ -329,6 +344,9 @@ mtr (My Traceroute) is a command-line tool that combines the functions of the tr
 <br>-u	Force UDP use instead of ICMP ECHO.
 <br>-4	Force IPv4 only.
 <br>-6	Force IPv6 only.
+
+<img width="870" alt="Screenshot 2023-11-14 at 17 02 55" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/67f415af-f5f0-4407-b138-23d076586f79">
+
 </details>
 
 <details>
@@ -343,6 +361,9 @@ htop is an interactive process and system resource monitor in a command-line env
 <br>-s –sort COLUMN	Sort the output based on COLUMN
 <br>-u–user=USERNAME	Display processes for the user with this USERNAME only.
 <br>-v –version	Display htop version and exit.
+
+ <img width="911" alt="Screenshot 2023-11-14 at 17 07 13" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/55ae4be6-a7b3-45a2-b6cb-25c56dbfd09b">
+
 </details>
 
 <details>
@@ -361,4 +382,7 @@ The Unix top command is useful for monitoring systems continuously for processes
 <br>-p	Monitor the processes identified by the given list of process ids.
 <br>-s	work in secure mode
 <br>-S	Display cumulative CPU time for each process and its children which have died and have been waited for by it
+
+ <img width="875" alt="Screenshot 2023-11-14 at 17 08 51" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/46e8ab2e-ebd1-4986-8c36-90a31530eb70">
+
 </details>
