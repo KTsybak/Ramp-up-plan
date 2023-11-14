@@ -4,7 +4,7 @@
   become: yes
 
   vars:
-    source_file: ./ansible/index.html
+    source_file: index.html
     destin_file: /var/www/html
 
   tasks:
