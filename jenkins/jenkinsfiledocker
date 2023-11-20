@@ -1,12 +1,15 @@
 pipeline {
     agent { label 'ubuntu_agent' }
+   environment {
+        DOCKER_IMAGE_NAME = 'childnginx'
+        DOCKER_IMAGE_TAG = 'latest'
+    }
 stages {
         stage('Deploy') {
             steps {
                 script{
                       withDockerRegistry(credentialsId: 'ecr:us-east-1:aws', url: 'https://266566341706.dkr.ecr.us-east-1.amazonaws.com/myecr') {
-                    docker.push("childnginx")
-                    docker.push("latest")
+                      docker.image("${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}").push()
 
 }
                 }
