@@ -8,8 +8,9 @@ stages {
         stage('Deploy') {
             steps {
                 script{
-                      withDockerRegistry(credentialsId: 'ecr:us-east-1:aws', url: 'https://266566341706.dkr.ecr.us-east-1.amazonaws.com/myecr') {
-                      docker.image("childnginx").push()
+                     docker.image("childnginx:latest").tag(266566341706.dkr.ecr.us-east-1.amazonaws.com/myecr:latest)
+                     withDockerRegistry(credentialsId: 'ecr:us-east-1:aws', url: 'https://266566341706.dkr.ecr.us-east-1.amazonaws.com/myecr') {
+                     docker.image("266566341706.dkr.ecr.us-east-1.amazonaws.com/myecr:latest").push()
 
 }
                 }
