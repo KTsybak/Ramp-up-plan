@@ -1,0 +1,14 @@
+pipeline {
+    agent { label 'ubuntu_agent' }
+        stage('Deploy') {
+            steps {
+                script{
+                      withDockerRegistry(credentialsId: 'ecr:us-east-1:aws', url: 'https://266566341706.dkr.ecr.us-east-1.amazonaws.com/myecr') {
+                    docker.push("childnginx")
+                    docker.push("latest")
+
+}
+                }
+            }
+        }
+    }
