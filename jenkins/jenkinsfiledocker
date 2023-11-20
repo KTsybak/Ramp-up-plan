@@ -10,8 +10,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    docker.image("childnginx:latest").tag("266566341706.dkr.ecr.us-east-1.amazonaws.com/myecr:latest")
-                    
+                    sh "docker tag childnginx:latest 266566341706.dkr.ecr.us-east-1.amazonaws.com/myecr:latest"
                     withDockerRegistry(credentialsId: 'ecr:us-east-1:aws', url: 'https://266566341706.dkr.ecr.us-east-1.amazonaws.com/myecr') {
                         docker.image("266566341706.dkr.ecr.us-east-1.amazonaws.com/myecr:latest").push()
                     }
