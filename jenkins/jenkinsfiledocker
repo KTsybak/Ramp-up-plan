@@ -12,7 +12,7 @@ pipeline {
       stage('Build') { 
             steps { 
                 script{
-                   dir('/home/jenkins/workspace/docker/daemon_tools_nginx') {
+                   dir('/home/jenkins/workspace/docker/docker/daemon_tools_nginx') {
                   dockerImage = docker.build "${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}"
 }
                 }
