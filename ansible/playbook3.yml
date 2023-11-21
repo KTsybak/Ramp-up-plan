@@ -1,5 +1,5 @@
 ---
-- name: Install Apache and Upload my Web Page
+- name: Install nginx and Upload my Web Page
   hosts: all
   become: yes
 
@@ -8,7 +8,7 @@
     destin_file: /var/www/html
 
   tasks:
-  - name: Install Apache WebServer
+  - name: Install nginx WebServer
     apt: name=nginx state=latest
 
   - name: Copy file
