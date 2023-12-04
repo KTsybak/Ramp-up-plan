@@ -1,0 +1,16 @@
+init_config:
+instances:
+  [{}]
+
+logs:
+ - type: file
+   path: /var/log/datadog/agent.log
+   service: custom_check
+   source: custom_check
+   log_processing_rules:
+     - type: exclude_at_match
+       name: status_code
+       pattern: "200"
+     - type: include_at_match
+       name: status_code
+       pattern: "ERROR"
