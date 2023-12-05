@@ -1,0 +1,58 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+  filelog:
+    include_file_path: true
+    poll_interval: 500ms
+    include:
+      - /var/log/myservice/mycheck.log
+      - /var/log/myservice/file_counter.log
+  hostmetrics:
+    collection_interval: 10s
+    scrapers:
+      paging:
+        metrics:
+          system.paging.utilization:
+            enabled: true
+      cpu:
+        metrics:
+          system.cpu.utilization:exporters:
+  datadog:
+    api:
+      site: "datadoghq.eu" 
+      key: key: ${DATADOG_API_KEY}
+
+
+service:
+  pipelines:
+    # Enable receiving traces or spans data from application though OTPL protocol and export it to Datadog
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [datadog]
+    
+    # Enable receiving metrics data from application though OTPL protocol and export it to Datadog
+    metrics:
+      receivers: [ otlp ]
+      processors: [ batch]
+      exporters: [ datadog]
+    logs:
+      receivers: [filelog]
+      processors: [batch]
+      exporters: [datadog]
+            enabled: true
+      disk:
+      filesystem:
+        metrics:
+          system.filesystem.utilization:
+            enabled: true
+      load:
+      memory:
+      network:
+      processes:
+
+processors:
+  batch:
+    timeout: 10s
