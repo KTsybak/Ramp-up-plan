@@ -21,4 +21,8 @@ Then I run the command sudo mysql nation < /tmp/nation.sql.
 - Next, I edit the file /etc/mysql/mariadb.conf.d/50-server.cnf, setting server-id = 2, log_bin = /var/log/mysql/mysql-bin.log, binlog_do_db = nation, relay-log = /var/log/mysql/mysql-relay-bin.log - defines the location of the replica relay log file.
 - Configure replication settings:
   <img width="903" alt="Screenshot 2023-12-27 at 15 02 15" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/489dd25e-1ef3-44ae-9478-7bc4738a72aa">
+- replica activation: START SLAVE;
+  <img width="820" alt="Screenshot 2023-12-27 at 15 07 20" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/2047523e-75f0-4de1-8535-0943000061f5">
+
+  
 
