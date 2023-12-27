@@ -24,5 +24,15 @@ Then I run the command sudo mysql nation < /tmp/nation.sql.
 - replica activation: START SLAVE;
   <img width="820" alt="Screenshot 2023-12-27 at 15 07 20" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/2047523e-75f0-4de1-8535-0943000061f5">
 
+## Result:
+- Tables that the database currently has on the _replica-server_:
+  <img width="710" alt="Screenshot 2023-12-27 at 15 09 44" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/cb25cff6-5eb3-4492-971d-47dfcba15826">
+- On the _source-server_, create the test_test table:
+  <img width="722" alt="Screenshot 2023-12-27 at 15 12 08" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/9be81571-f27b-4417-a423-480b853bb6f7">
+- The test_test beam has successfully appeared on the _replica-server_:
+  <img width="868" alt="Screenshot 2023-12-27 at 15 16 37" src="https://github.com/KTsybak/Ramp-up-plan/assets/149802416/f8847466-e461-40ab-8974-3994f63f383c">
+
+
+
   
 
