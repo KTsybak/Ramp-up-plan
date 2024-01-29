@@ -1,0 +1,51 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+  filelog:
+    include_file_path: true
+    poll_interval: 500ms
+    include:
+      - /example.log
+    multiline:
+         line_start_pattern: '@'
+    operators:
+      - type: regex_parser
+        id: regex
+        regex: '^\@\w{24}\s\{"message":"(?P<message>).+","host":"(?P<host>).+","timestamp":"(?P<date>\d{13})","level":"(?P<status>[^"]+)","service":"(?P<service>[^"]+)","summary":"(?P<summary>[^"]+)"'
+        severity:
+          parse_from: attributes.status
+        output: test
+      - type: filter
+        id: test
+        expr: 'attributes.status != "ERROR"'
+        output: test2
+      - type: regex_parser
+        id: test2
+        regex: '"message":"(?P<message>[^"]+)"'
+        parse_to: body.message
+processors:
+  batch:
+    timeout: 10s
+
+exporters:
+    api:
+      site: "datadoghq.eu" 
+      key: key: ${DATADOG_API_KEY}
+
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [datadog]
+        metrics:
+      receivers: [ otlp ]
+      processors: [ batch]
+      exporters: [ datadog]
+    logs:
+      receivers: [filelog]
+      processors: [batch]
+      exporters: [datadog]
