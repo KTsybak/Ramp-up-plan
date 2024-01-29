@@ -37,7 +37,7 @@ processors:
 exporters:
     api:
       site: "datadoghq.eu" 
-      key: key: ${DATADOG_API_KEY}
+      key: ${DATADOG_API_KEY}
 
 
 service:
