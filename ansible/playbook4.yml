@@ -1,0 +1,42 @@
+---
+- name: configuring LVM on a new disk
+  hosts: all
+  become: yes
+
+  vars:
+    disk: /dev/sdb
+    vg: vg1
+    lv: var_data
+    lv_size: 10g
+    filesystem: ext4
+    mount_dir: /var
+
+  tasks:
+    - name: Create a volume group
+      community.general.lvg:
+        vg: "{{ vg }}"
+        pvs: "{{ disk }}"
+
+    - name: Create Logical Volume for data persistence
+      community.general.lvol:
+        vg: "{{ vg }}"
+        lv: "{{ lv }}"
+        size: "{{ lv_size }}"
+
+    - name: Create filesystem on LV 
+      community.general.filesystem:
+        fstype: "{{ filesystem }}"
+        resizefs: true
+        dev:  /dev/mapper/{{ vg }}-{{ lv }}
+
+    - name: Get LV UUID
+      ansible.builtin.command: lsblk /dev/mapper/{{ vg }}-{{ lv }} -no UUID
+      register: lv_uuid
+
+    - name: Mount created filesystem
+      ansible.posix.mount:
+        backup: yes
+        path: "{{ mount_dir }}"
+        src: UUID={{ lv_uuid.stdout }} 
+        state: mounted
+        fstype: "{{ filesystem }}"
