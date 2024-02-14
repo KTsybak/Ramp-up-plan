@@ -22,4 +22,12 @@ pipeline {
             }
         }
     }
+ post {
+        success {
+            discordSend description: "Jenkins Pipeline Build", footer: "The Jenkins pipeline has been completed successfully.", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/1137765526815379607/_GSiQkN9-4BLmP7bnPFOdYJYtnVRRZzlQgBZF3Rgr1vPUyrar27KUMwEaEBjwOgVOvYd"
+        }
+        failure {
+      discordSend description: "Jenkins Pipeline Build", footer: "The Jenkins pipeline has been failed.", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/1137765526815379607/_GSiQkN9-4BLmP7bnPFOdYJYtnVRRZzlQgBZF3Rgr1vPUyrar27KUMwEaEBjwOgVOvYd"
+        }
+    }
 }
